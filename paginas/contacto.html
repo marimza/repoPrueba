@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>Contacto</title>
+</head>
+
+<body>
+    <header>
+        <!-- ENCABEZADO. Puede haber un H1, el logo-->
+        <nav>
+            <ul>
+                <li> <a href="../index.html">Inicio</a> </li>
+                <li> <a href="./novedades.html">Novedades</a></li>
+                <li> <a href="./contacto.html">Contacto</a></li>
+
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Etiqueta</h1>
+        <h1>Class</h1>
+        <h1>ID</h1>
+
+        <!-- <h1>Contacto</h1> -->
+
+        <form action="formulario.php">
+            <!-- forma parte del backend. Nosotros lo maquetamos pero no se va a enviar a ningun lado-->
+            <fieldset>
+                <!-- NO ES OBLIGATORIA ÉSTA ETIQUETA, ES PARA EL RECUADRO-->
+                <legend>CONTANOS DE VOS</legend>
+                <div>
+                    <label for="nombre">Decinos tu nombre</label>
+                    <!--es lo que le va a dar el titulo al input. Se relacionan el label y el input-->
+                    <input type="text" name="nombre" id="nombre" required> <!-- required es para campo obligatorio-->
+                    <!--El input es donde se va a cargar la información.
+                    Es type "text" porque voy a cargar un nombre-->
+                </div>
+                <br>
+                <div>
+                    <label for="pais">¿De qué pais sos?</label>
+                    <select name="pais" id="pais">
+                        <!-- para seleccionar opciones,i.e, un menú desplegable-->
+                        <option value="arg">Argentina</option> <!-- Especifica el valor del input-->
+                        <option value="peru">Perú</option> <!-- el "value" es lo que va a llegar a la base de datos-->
+                        <option value="ven">Venezuela</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="telefono">Dejanos tu teléfono</label>
+                    <input type="tel" name="telefono" id="telefono">
+                    <!-- Podemos poner input number pero lo más apropiado es el input tel-->
+
+                </div>
+                <br>
+                <div>
+                    <label for="fnac">Fecha de nacimiento</label>
+                    <input type="date" name="fnac" id="fnac">
+                </div>
+                <br>
+                <div>
+                    <label for="correo">Decinos tu email</label>
+                    <input type="email" name="correo" id="correo">
+                </div>
+                <br>
+                <div>
+                    <label for="comentario">Dejanos tu comentario</label>
+                    <br>
+                    <textarea name="comentario" id="comentario" cols="50" rows="8"
+                        placeholder="Contanos como podemos mejorar"></textarea>
+                </div>
+                <br>
+                <div>
+                    <h3>
+                        ¿Dónde nos conociste?
+                    </h3>
+                    <input type="checkbox" name="insta" id="insta">
+                    <label for="insta">Instagram</label>
+
+                    <input type="checkbox" name="shift" id="shift">
+                    <label for="shift">Local shift</label>
+
+                </div>
+                <div>
+                    <h3>Novedades cada cuanto?</h3>
+                    <input type="radio" name="news" id="15">
+                    <label for="15">15 días</label>
+
+                    <input type="radio" name="news" id="30">
+                    <label for="30">30 días</label>
+                </div>
+
+                <!-- DIFERENCIA ENTRE CHECKBOX Y RADIO: En el checkbox puedo seleccionar ambas opciones, mientras que en el radio, puedo seleccionar solo una opcion poniendo en el "name" de los inputs el mismo nombre -->
+                <br>
+                <div>
+                    <input type="submit" value="Enviar"> <!-- En éste caso el "value" hace referencia al texto que se visualiza-->
+                </div>
+
+            </fieldset>
+        </form>
+    </main>
+
+</body>
+
+</html>
